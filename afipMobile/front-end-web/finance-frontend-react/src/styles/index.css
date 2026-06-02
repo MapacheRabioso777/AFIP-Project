@@ -1,0 +1,61 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  * {
+    @apply border-gray-200 dark:border-dark-border;
+  }
+
+  body {
+    @apply m-0 p-0 font-sans overflow-x-hidden;
+    @apply bg-slate-50 text-slate-900;
+    @apply dark:bg-dark-bg dark:text-text-primary;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark-bg transform;
+  }
+
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500 shadow-primary hover:shadow-primary-md hover:scale-[1.02];
+  }
+
+  .btn-secondary {
+    @apply bg-dark-surface text-text-primary hover:bg-dark-bg-tertiary focus:ring-dark-border hover:scale-[1.02] border border-dark-border;
+  }
+
+  .btn-danger {
+    @apply bg-danger-500 text-white hover:bg-danger-600 focus:ring-danger-500 shadow-md hover:shadow-lg hover:scale-[1.02];
+  }
+
+  .btn-success {
+    @apply bg-success-500 text-white hover:bg-success-600 focus:ring-success-500 shadow-md hover:shadow-lg hover:scale-[1.02];
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2.5 border rounded-lg transition-all duration-300;
+    @apply bg-white border-slate-300 text-slate-900 placeholder:text-slate-400;
+    @apply dark:bg-dark-surface dark:border-dark-border dark:text-text-primary dark:placeholder:text-text-tertiary;
+    @apply focus:ring-2 focus:ring-primary-500 focus:border-primary-500;
+  }
+
+  .input-error {
+    @apply border-danger-500 focus:ring-danger-500 focus:border-danger-500;
+  }
+
+  .card {
+    @apply p-6 rounded-xl shadow-sm border transition-all duration-300;
+    @apply bg-white border-slate-200 text-slate-900;
+    @apply dark:bg-dark-surface dark:border-dark-border dark:text-text-primary;
+    @apply hover:shadow-md dark:hover:shadow-dark-lg dark:hover:border-dark-bg-tertiary;
+  }
+
+  .table-container {
+    @apply overflow-x-auto bg-dark-surface rounded-xl shadow-dark border border-dark-border;
+  }
+}
