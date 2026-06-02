@@ -10,8 +10,8 @@ dotenv.config({ path: "../.env" });
   await modelsApp(false); // ← IMPORTANTE: dejar en true al crear, luego cambiar a false
 
   const PORT = process.env.PORT || 3001;
-  app.listen(PORT, '192.168.80.134:5173', () => {
-    console.log(`Servidor conectado en http://192.168.80.134:5173:${PORT}`);
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servidor conectado en ${PORT}`);
   });
 })();
 
